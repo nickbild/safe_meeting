@@ -74,7 +74,7 @@ def main():
             img = Image.open('out.jpg')
 
             index, score = predict_image_class(img)
-            print(index)
+            #print(index)
             #print(score)
             #print("----")
             if index == 0:
