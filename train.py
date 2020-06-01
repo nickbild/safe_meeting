@@ -204,7 +204,7 @@ def train(num_epochs):
 
 
 def adjust_learning_rate(epoch):
-    lr = 0.000001
+    lr = 0.00001
 
     if epoch > 800:
         lr = lr / 1000
@@ -240,7 +240,7 @@ if __name__ == "__main__":
     if cuda_avail:
         model.cuda()
 
-    optimizer = Adam(model.parameters(), lr=0.000001, weight_decay=0.0001)
+    optimizer = Adam(model.parameters(), lr=0.00001, weight_decay=0.001)
     loss_fn = nn.CrossEntropyLoss()
 
     train_loader = load_train_dataset(train_transformations)
