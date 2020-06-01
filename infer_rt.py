@@ -74,6 +74,7 @@ def main():
             print(index)
             print(score)
             print("----")
+            # http://192.168.1.139:5000/video_mute
 
         cap.release()
     else:
