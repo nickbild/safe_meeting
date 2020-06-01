@@ -40,10 +40,9 @@ api = Api(app)
 
 class VideoMute(Resource):
     def get(self):
-        # autopy.key.toggle(autopy.key.Code.UP_ARROW, True, [], 0)
-        # time.sleep(key_hold_time_sec)
-        # autopy.key.toggle(autopy.key.Code.UP_ARROW, False, [], 0)
-        print("mute")
+        autopy.key.toggle(autopy.key.Code.SPACE, True, [], 0)
+        time.sleep(key_hold_time_sec)
+        autopy.key.toggle(autopy.key.Code.SPACE, False, [], 0)
         return None
 
 
@@ -51,7 +50,7 @@ class VideoMute(Resource):
 # Attach endpoints.
 ###
 
-api.add_resource(VideoMute, '/video_mute')
+api.add_resource(VideoMute, '/video_mute_toggle')
 
 
 ###
