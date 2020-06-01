@@ -20,7 +20,6 @@ trained_model = "26_600-100.model"
 num_classes = 2
 
 video_host = "192.168.1.139"
-video_mute = False
 
 # Load the saved models.
 checkpoint = torch.load(trained_model)
@@ -66,6 +65,7 @@ def gstreamer_pipeline (capture_width=3280, capture_height=2464, display_width=i
 
 
 def main():
+    video_mute = False
     cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
 
     if cap.isOpened():
