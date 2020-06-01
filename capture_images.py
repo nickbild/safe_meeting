@@ -35,9 +35,8 @@ def save_frame_sequence(num_images, delay_sec, cap):
 
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
+    cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
     sleep(10)
     print("Go!")
     save_frame_sequence(10, 1, cap)
     print("*** DONE ***")
-    
