@@ -10,13 +10,16 @@ from PIL import Image
 from train import Net
 import cv2
 from time import sleep
+import requests
 
 
 img_width = 300
 img_height = 300
 
-trained_model = "16_600-100.model"
+trained_model = "26_600-100.model"
 num_classes = 2
+
+video_host = "192.168.1.139"
 
 # Load the saved models.
 checkpoint = torch.load(trained_model)
@@ -72,9 +75,10 @@ def main():
 
             index, score = predict_image_class(img)
             print(index)
-            print(score)
-            print("----")
-            # http://192.168.1.139:5000/video_mute_toggle
+            #print(score)
+            #print("----")
+            if index == 0:
+                requests.get("http://{}:5000/video_mute_toggle".format(video_host))
 
         cap.release()
     else:
