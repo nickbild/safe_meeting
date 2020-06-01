@@ -20,6 +20,7 @@ trained_model = "26_600-100.model"
 num_classes = 2
 
 video_host = "192.168.1.139"
+video_mute = False
 
 # Load the saved models.
 checkpoint = torch.load(trained_model)
@@ -74,10 +75,10 @@ def main():
             img = Image.open('out.jpg')
 
             index, score = predict_image_class(img)
-            #print(index)
-            #print(score)
-            #print("----")
-            if index == 0:
+            print(index)
+
+            if index == 0 and not video_mute:
+                video_mute = True
                 requests.get("http://{}:5000/video_mute_toggle".format(video_host))
 
         cap.release()
