@@ -15,7 +15,7 @@ from time import sleep
 img_width = 300
 img_height = 300
 
-trained_model = "0_49-50.model"
+trained_model = "16_600-100.model"
 num_classes = 2
 
 # Load the saved models.
@@ -42,7 +42,7 @@ def predict_image_class(image):
     input = Variable(image_tensor)
 
     # Predict the class of the image.
-    output = model_objects(input)
+    output = model(input)
 
     index = output.data.numpy().argmax()
     score = output[0, index].item()
