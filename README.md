@@ -6,6 +6,10 @@ Many of us are working from home during these unusual times, and as such, are sp
 
 Safe Meeting prevents embarrassing and unprofessional situations by stopping your video stream if certain attire that's inappropriate for business is detected.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/nickbild/safe_meeting/master/media/video.gif">
+</p>
+
 ## How It Works
 
 A camera is connected to an NVIDIA Jetson Nano.  This camera is positioned immediately next to a webcam that is used for video conferences, such that it captures the same region.
