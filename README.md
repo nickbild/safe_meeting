@@ -16,7 +16,8 @@ When the [REST API server](https://github.com/nickbild/safe_meeting/blob/master/
 
 ## Media
 
-YouTube:
+YouTube:  
+https://www.youtube.com/watch?v=MeiassI3EQg
 
 Full Setup:
 
